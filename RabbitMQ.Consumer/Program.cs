@@ -35,3 +35,4 @@ consumer.ReceivedAsync += async (sender, eventArgs) =>
 await channel.BasicConsumeAsync("messages", autoAck: false, consumer);
 
 Console.ReadLine();
+Console.WriteLine("xxxxxxxxxxxxENDxxxxxx");

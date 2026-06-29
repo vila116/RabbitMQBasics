@@ -7,7 +7,9 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = await factory.CreateConnectionAsync();
 //instantiate a channel - way to communicate with my broker instance
 using var channel = await connection.CreateChannelAsync();
-
+///<Summary> 
+///declaring queue with the same name as producer "messages"
+///</Summary>>
 
 await channel.QueueDeclareAsync(
     queue: "messages",
